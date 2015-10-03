@@ -45,7 +45,9 @@ $('.bxslider').bxSlider({
       minSlides: 1,
       maxSlides: 3,
       slideWidth: 0,
-      slideMargin: 0
+      slideMargin: 0,
+      auto: true,
+      infiniteLoop: true
     });
 
 
