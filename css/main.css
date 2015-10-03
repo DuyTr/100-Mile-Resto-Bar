@@ -94,10 +94,11 @@ body{
 	right:40px;
 	display:none;
   z-index: 100;
+
 }
 
 .scrollToTop p{
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .content{
