@@ -56,8 +56,8 @@ h1, h2, h3   {
   font-family: 'Open-Sans',sans-serif;
 }
 h1              { font-size: 2.3em; margin: 1.25em 0 }
-h2              { font-size: 1.5em; margin: .75em 0 }
-h3              { font-size: 1.5em; margin: .75em 0 }
+h2              { font-size: 1.8em; margin: .5em 0 }
+h3              { font-size: 1.5em; margin: .5em 0 }
 h1, h2       { font-weight: bolder }
 h3 { font-weight: normal}
 p{
@@ -105,53 +105,43 @@ body{
   padding: 3% 5%;
 }
 
-.clearfix:after {
-    content:"";
-    display: table;
-    clear: both;
-}
-
-.content ul {
-  margin: 7% auto;
-}
-
-.content ul li{
-  padding: 0 1%;
-  box-sizing: border-box;
-
-}
-
 .billboard{
-  background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)),url('../assets/images/rustic-masthead.jpg') no-repeat;
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)),url('../assets/images/rustic-masthead.jpg') no-repeat;
   background-position: top center;
   background-size:cover;
-  text-align: center;
+  height: 580px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button{
     background-color: #f89603;
-    border: none;
-    font-size: 0.65em;
-    width: 120px;
-    height: 35px;
-    padding: 6px 3px;
+    font-size: 1.1rem;
+    padding: 8px 3px;
+    margin-top: 1rem;
+    width: 200px;
+    height: 50px;
+    border-radius: 0;
+    text-transform: uppercase;
 
     -webkit-box-shadow: 11px 12px 10px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 11px 12px 10px -5px rgba(0,0,0,0.5);
     box-shadow: 11px 12px 10px -5px rgba(0,0,0,0.5);
-    border-radius: 3px 3px 3px 3px;
-
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-border-radius: 3px 3px 3px 3px;
     border: 0px solid #000000;
 }
 
+button:hover{
+  color: #d8d2a1;
+}
 
 
 .navbar{
   font-family: 'Open-Sans',sans-serif;
   font-style: normal;
-  font-weight: lighter;
+  font-weight: bold;
+  text-transform: uppercase;
   width: 95%;
   margin: 0 auto;
   height: 40px;
@@ -160,10 +150,9 @@ button{
 }
 
 .navbar ul{
-  padding: 11px 0 0 0;
+  padding: 13px 0 0 0;
   list-style: none;
-
-
+  margin-top: 0;
 }
 
 .navbar li{
@@ -175,12 +164,16 @@ button{
   color:white;
 }
 
+.navbar a:hover{
+  color: #d8d2a1;
+}
+
 .caption{
+  width: 100%;
   color: white;
   padding: 40px 0 50px 0;
   line-height: 1.5;
 }
-
 
 .logo{
   width: 60%;
@@ -188,7 +181,9 @@ button{
   max-width: 500px;
 }
 
+
 #datecheck{
+  width: 100%;
   height:55px;
   background: rgba(72,49,24,0.7);
   color: white;
@@ -202,12 +197,18 @@ button{
 #datecheck::first-line{
   font-size: 15px;
 }
-.content ul{
+
+.content ul {
+  margin: 5% auto;
   padding: 0;
+
 }
+
 .content ul li{
+  padding: 0 1%;
   list-style: none;
   display: block;
+  box-sizing: border-box;
 }
 
 .booking{
@@ -226,14 +227,14 @@ button{
   padding: 3%;
 }
 
-form{
+.myform{
   margin: 10px 0;
   z-index: 2;
 }
 
-form label{
-  width: 150px !important;
-  height: 27px !important;
+.myform label{
+  width: 150px;
+  height: 27px;
   display: block;
   color: #e7e3c5;
   margin: 0 auto;
@@ -241,9 +242,9 @@ form label{
 
 }
 
-form input{
-  width: 150px !important;
-  height: 27px !important;
+.myform input{
+  width: 150px;
+  height: 27px;
   margin-bottom: 15px;
   border: 1.5px solid #f89603;
   color: black;
@@ -251,14 +252,15 @@ form input{
   text-align: center;
 }
 
-form ul{
+.myform ul{
   padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between
 }
 
-form ul li{
+.myform ul li{
   list-style: none;
-  display: block;
-  float:left;
   width: 50%;
 }
 
@@ -275,12 +277,13 @@ footer{
 
 footer ul{
   padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 footer ul li {
   list-style: none;
-  display: block;
-  float:left;
   width: 50%;
   text-align: right;
   font-size: 2.8vw;
@@ -315,67 +318,71 @@ footer img{
 }
 
 .bx-viewport{
-  border-width: 0px 0px 0px 5px!important;
+  border-width: 0px!important;
 }
 
-
+#ui-datepicker{
+  border-bottom: none;
+  padding-bottom: 0px;
+}
 
 
 @media screen and (min-width:500px){
-form label{
-  width: 185px !important;
-}
+.myform label{
+    width: 185px ;
+  }
 
-form input{
-  width: 185px !important;
-  font-size: .9em;
-}
+.myform input{
+    width: 185px ;
+    font-size: .9em;
+  }
 }
 @media screen and (min-width:768px){
-.content ul li{
-  width: 33.3%;
-  float: left;
+  .content ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 
-}
-.bx-wrapper img,
-.bx-wrapper li{
-  max-width: 50vw;
-}
+  .content ul li{
+    width: 33.3%;
 
-.navbar{
-  text-align: right;
-  font-size: 1.1em;
-}
+  }
+  .bx-wrapper img,
+  .bx-wrapper li{
+    max-width: 50vw;
+  }
 
-.booking{
-  padding: 2% 3%;
-}
+  .navbar{
+    text-align: right;
+    font-size: 1.1em;
+  }
 
-form{
-  z-index: 3;
-}
+  .booking{
+    padding: 2% 3%;
+  }
 
-form label{
-  width: 200px !important;
-}
+  .myform label{
+    width: 200px ;
+  }
 
-form input{
-  width: 200px !important;
-  font-size: 1em;
-}
+  .myform input{
+    width: 200px ;
+    font-size: 1em;
+  }
 
-form ul li{
-  width: 33%;
-}
+  .myform ul li{
+    width: 33%;
+  }
 
-footer ul li {
-  font-size: 20px;
-}
+  footer ul li {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width:1024px){
-.bx-wrapper img,
-.bx-wrapper li{
-    max-width: 33.3vw;
-  }
+  .bx-wrapper img,
+  .bx-wrapper li{
+      max-width: 33.3vw;
+    }
 }

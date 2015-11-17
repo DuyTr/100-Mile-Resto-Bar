@@ -44,10 +44,13 @@ function filterPath(string) {
 $('.bxslider').bxSlider({
       minSlides: 1,
       maxSlides: 3,
+      moveSlides: 1,
       slideWidth: 0,
       slideMargin: 0,
       auto: true,
-      infiniteLoop: true
+      infiniteLoop: true,
+      pager: false,
+      controls: false,
     });
 
 
