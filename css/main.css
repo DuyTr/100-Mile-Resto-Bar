@@ -155,7 +155,7 @@ button:hover{
   margin: 0 auto;
   height: 40px;
   margin-bottom: 30px;
-  font-size: 0.8em;
+  font-size: 0.65em;
 }
 
 .navbar ul{
@@ -242,17 +242,17 @@ button:hover{
 }
 
 .myform label{
-  width: 150px;
+  width: 130px;
   height: 27px;
   display: block;
   color: #e7e3c5;
   margin: 0 auto;
   text-align: left;
-
+  font-size: .75em;
 }
 
 .myform input{
-  width: 150px;
+  width: 130px;
   height: 27px;
   margin-bottom: 15px;
   border: 1.5px solid #f89603;
