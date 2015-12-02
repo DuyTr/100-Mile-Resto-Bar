@@ -155,7 +155,7 @@ button:hover{
   margin: 0 auto;
   height: 40px;
   margin-bottom: 30px;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .navbar ul{
@@ -361,6 +361,9 @@ footer img{
     width: 185px ;
     font-size: .9em;
   }
+.navbar{
+  font-size:1em;
+}
 }
 @media screen and (min-width:768px){
   .content ul{
