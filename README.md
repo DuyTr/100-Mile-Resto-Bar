@@ -1,4 +1,4 @@
-# 100 Mile Resto Bar Webite
+# 100 Mile Resto Bar Website
 
 ### Description:
 
